@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //Declarando variáveis
+        // let nomeUsuario = prompt("Qual é o seu nome?");
+        // let idade = 25;
+
+        //Exibindo mensagem personalizada
+        // alert(`Olá, ${nomeUsuario}! Seja bem-vindo ao JavaScript.`);
+        // console.log('nome: '+nomeUsuario);
+        // console.log('idade: '+idade);
+
+//--------------------------------------------------------------------------------------------------//
+        
+        //converte a entrada para número
+        // let num1 = Number(prompt("Insira o número 1:"));
+        // let num2 = Number(prompt("Insira o número 2:"));
+
+        // let soma = num1 + num2;
+
+        // alert(`A soma de ${num1} e ${num2} é: ${soma}`);
+
+//----------------------------------------EXERCÍCIOS--------------------------------------------------//
+
+    //1. Bem-vindo ao Sistema
+    // Peça o nome do usuário e exiba uma mensagem de boas-vindas na tela.
+    
+    // RESOLUÇÃO //
+    
+    // let nome = prompt("Digite seu nome:");
+
+    // alert("Seja bem-vindo, "+nome+"!");
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 2. Calculadora Simples
+    // // Solicite dois números ao usuário, calcule a soma deles e mostre o resultado.
+    
+    // RESOLUÇÃO //
+    
+    // let num1 = Number(prompt("Digite o primeiro número:"));
+    //         let num2 = Number(prompt("Digite o segundo número:"));
+
+    //         let soma = num1 + num2;
+
+    //         alert(`A soma de ${num1} + ${num2} é: ${soma}`);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 3. Descubra sua Idade
+    // // Peça ao usuário o ano atual e o ano de nascimento, calcule sua idade e exiba o resultado.
+    
+    // RESOLUÇÃO //
+    
+    // let anoAtual = Number(prompt("Digite o ano atual:"));
+    //         let anoNascimento = Number(prompt("Digite seu ano de nascimento:"));
+
+    //         let idade = anoAtual - anoNascimento;
+
+    //         alert("Sua idade é "+ idade);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 4. Loja de Sorvetes
+    // // Pergunte ao usuário quantos sorvetes ele quer comprar e o preço de cada um, calcule o valor total da compra e mostre na tela.
+    
+    // RESOLUÇÃO //
+    
+    // let qtdSorvetes = Number(prompt("Quantos sorvetes você deseja comprar?"));
+    //         let precoSorvete = Number(prompt("Digite o preço do sorvete:"));
+
+    //         let total = qtdSorvetes*precoSorvete;
+
+    //         alert("Total a pagar: R$"+total.toFixed(2));
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 5. Jogo de Adivinhação
+    // // Escolha um número secreto fixo. Pergunte ao usuário um número e mostre o número secreto junto com o número que ele chutou.
+    
+    // RESOLUÇÃO //
+    
+    // let numAleatorio = Math.round(Math.random()*10) + 1;
+    //         let numUsusario = prompt("Digite um número entre 1 e 10:");
+
+    //         alert(`Seu número é: ${numUsusario}, o número aleatório era: ${numAleatorio}`);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 6. Exibição de Números
+    // // Peça dois números ao usuário e exiba os dois números que ele informou.
+    
+    // RESOLUÇÃO //
+    
+    // let num1 = Number(prompt("Digite um número:"));
+    //         let num2 = Number(prompt("Digite outro número:"));
+
+    //         alert(`Primeiro número: ${num1}. Segundo número: ${num2}.`);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 7. Conta de Restaurante
+    // // Peça ao usuário o valor da conta e a porcentagem de gorjeta desejada. Calcule o valor da gorjeta e o total da conta e mostre na tela.
+    
+    // RESOLUÇÃO //
+
+    // let valorConta = parseFloat(prompt("Digite o valor da conta:"));
+    //         let gorjeta = parseInt(prompt("Digite a procentagem da gorjeta de sejada:"));
+
+    //         let valorGorjeta = (valorConta*gorjeta)/100;
+    //         let valorTotal = valorConta + valorGorjeta;
+
+    //         alert(`O valor total da conta é R$${valorTotal.toFixed(2)}. O valor da gorjeta é R$${valorGorjeta.toFixed(2)}`);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 8. Hora da Multiplicação
+    // // Peça dois números ao usuário, calcule a multiplicação deles e exiba o resultado no console.
+    
+    // RESOLUÇÃO //
+
+    // let num1 = Number(prompt("Digite um número:"));
+    //         let num2 = Number(prompt("Digite outro número:"));
+
+    //         console.log(num1*num2);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 9. Previsão do Futuro
+    // // Pergunte ao usuário seu nome, o ano atual e quantos anos ele quer adicionar. Calcule e exiba o ano futuro.
+   
+    // RESOLUÇÃO //
+   
+    // let nome = prompt("Digite seu nome:");
+    //         let anoAtual = parseInt(prompt("Digite o ano atual:"));
+    //         let anosAdicional = parseInt(prompt("Quantos anos deseja adicionar?"));
+
+    //         alert(`Olá ${nome}, estamos no ano de ${anoAtual+anosAdicional}!`);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // 10. Exibição de Nota
+    // // Peça ao usuário uma nota e mostre na tela a nota digitada.
+
+    // RESOLUÇÃO //
+
+    // let nota = parseFloat(prompt("Digite sua nota:"));
+
+    // alert(`Sua nota é: ${nota}`);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // Descrição do Desafio:
+
+    // // 1. Solicitar ao usuário:
+    // //     - O nome do produto.
+    // //     - A quantidade desejada.
+    // //     - O preço unitário do produto.
+    // // 2. Calcular o total da compra:
+    // //     - Multiplique a quantidade pelo preço unitário.
+    // // 3. Exibir o resultado:
+    // //     - Usar `alert` para mostrar o total da compra em uma frase como:`"Você comprou X unidades de [produto] por R$ Y, totalizando R$ Z."`
+    // //     - Exibir a mesma mensagem no console com `console.log`.
+
+    // RESOLUÇÃO //
+
+    // let nomeProd = prompt("Digite o nome do produto:");
+    //         let qtd = parseInt(prompt("Digite a quantidade:"));
+    //         let precoUnitario = parseFloat(prompt("Digite o preço unitário do produto:"));
+
+    //         alert(`Você comprou ${qtd} unidades de ${nomeProd} por R$ ${precoUnitario} cada, totalizando R$ ${qtd*precoUnitario}.`);
+    //         console.log(`Você comprou ${qtd} unidades de ${nomeProd} por R$ ${precoUnitario} cada, totalizando R$ ${qtd*precoUnitario}.`);
+
+//--------------------------------------------------------------------------------------------------//
+
+    // // Desafio Final: Calculadora de Média Simples
+
+    // // Você foi contratado para desenvolver uma funcionalidade simples de uma calculadora que ajudará estudantes a calcular suas notas finais. Para isso, você precisa criar um script JavaScript que:
+
+    // // 1. Solicite ao usuário o nome da disciplina usando `prompt`.
+    // // 2. Solicite ao usuário as notas das três provas que ele realizou, uma de cada vez, usando `prompt`.
+    // // 3. Calcule a média simples das notas.
+    // // 4. Exiba uma mensagem final ao usuário, informando:
+    // //     - O nome da disciplina.
+    // //     - As três notas digitadas.
+    // //     - A média calculada.
+
+    // // ---
+
+    // // ### Regras
+
+    // // - Você deve usar variáveis para armazenar as entradas do usuário e o resultado da média.
+    // // - Certifique-se de que as notas sejam tratadas como números para realizar o cálculo.
+    // // - Utilize apenas conceitos de declaração de variáveis, entrada com `prompt`, manipulação de tipos e exibição com `alert`.
+
+
+    // RESOLUÇÃO //
+
+    // let nomeDisciplina = prompt("Digite o nome da Disciplina:");
+    // let nota1 = parseFloat(prompt("Digite a nota da primeira prova:"));
+    // let nota2 = parseFloat(prompt("Digite a nota da segunda prova:"));
+    // let nota3 = parseFloat(prompt("Digite a nota da terceira prova:"));
+
+    // let media = (nota1+nota2+nota3)/3;
+    
+    // alert(`Disciplina: ${nomeDisciplina} \nProva 1: ${nota1} \nProva 2: ${nota2} \nProva 3: ${nota3} \nMédia: ${media.toFixed(2)}`);
+
+    </script>
+</body>
+
+</html>
