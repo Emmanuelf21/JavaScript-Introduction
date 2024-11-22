@@ -1,0 +1,1 @@
+usar 'npm install prompt-sync'
