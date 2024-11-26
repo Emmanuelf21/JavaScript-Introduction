@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="corpo">
+    <h1 id="titulo">Olá, Mundo!</h1>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+    <script>
+        let nome = prompt("Qual seu nome?");
+        let corpo = document.getElementById("corpo");
+        let titulo = document.getElementById("titulo");
+    
+        titulo.innerText = `Bem-vindo, ${nome}!`; //altera o texto interno da tag
+        corpo.innerHTML += '<h2>Boa pa nois familia</h2>'; //adiciona uma tag h2 no corpo do html
+        // document.querySelector("body").innerHTML += '<h2>Boa pa nois familia</h2>';
+    </script>
+</body>
+</html>
