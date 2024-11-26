@@ -13,3 +13,5 @@ const banana = document.createElement("li");
 
 banana.innerText = 'banana';
 lista.appendChild(banana);
+
+lista.removeChild(novoItem);
