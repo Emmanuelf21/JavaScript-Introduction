@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    
+    .oculto {
+        display: none;
+      }
+      .visivel {
+        display: block;
+        background: linear-gradient(to right, blueviolet, violet);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: fit-content;
+        font-size: 20pt;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="botao">Ocultar/Mostrar</button>
+    <div id="caixa" class="oculto">Este texto será ocultado.</div>
+    <script src="mouseEvent.js"></script>
+  </body>
+</html>
