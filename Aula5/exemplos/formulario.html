@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="cadastro">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="status"></p>
+
+    <script>
+      const form = document.getElementById("cadastro");
+      const status = document.getElementById("status");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        status.innerText = "CADASTRADO COM SUCESSO!";
+      });
+    </script>
+  </body>
+</html>
