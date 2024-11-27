@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="mensagem">Clique no botão para mudar esta mensagem!</h2>
+    <button id="mudaMensagem">Mudar Mensagem</button>
+    <button id="resetar">Reiniciar</button>
+    <script>
+      const mensagem = document.getElementById("mensagem");
+      const mudaMensagem = document.getElementById("mudaMensagem");
+      const resetar = document.getElementById("resetar");
+
+      mudaMensagem.addEventListener("click", () => {
+        mensagem.innerText += "Mensagem alterada com sucesso!";
+      });
+
+      resetar.addEventListener("click", () => {
+        //reseta a mensagem
+        // mensagem.innerText = "Clique no botão para mudar esta mensagem!";
+        window.location.reload();//faz o reload da página
+    });
+    </script>
+  </body>
+</html>
