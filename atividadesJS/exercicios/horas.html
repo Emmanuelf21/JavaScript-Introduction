@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+  </head>
+  <body>
+    <a href="../index.html">Home</a>
+    <h1></h1>
+    <script>
+      let texto = document.querySelector("h1");
+      let horario = new Date().getHours();
+
+      if (horario >= 5 && horario <= 11) {
+        texto.innerText = "Bom dia!";
+      } else if (horario >= 12 && horario < 18) {
+        texto.innerText = "Boa Tarde!";
+      } else {
+        texto.innerText = "Boa noite!";
+      }
+    </script>
+  </body>
+</html>

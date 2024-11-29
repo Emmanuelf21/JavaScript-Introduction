@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+      .oculto {
+        display: none;
+      }
+      .visivel {
+        display: block;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">Home</a>
+
+    <p>Escolha um numero de 1 a 10.</p>
+
+    <!-- entra -->
+    <div class="flex">
+      <input type="text" name="numero" id="numeroEscolhido" placeholder="Digite um numero" />
+      <button class="btn">Chutar</button>
+    </div>
+    <h1 class="oculto">Parabéns, Você acertou!</h1>
+
+    <script>
+      let numeroAleatorio = Math.round(Math.random() * 10);
+      let btn = document.querySelector(".btn");
+      let chute;
+      
+      btn.addEventListener("click", () => {
+        chute = document.querySelector("#numeroEscolhido").value;
+        if (chute == numeroAleatorio) {
+          document.querySelector("h1").classList.toggle("visivel");
+        } else {
+          alert("Tente novamente!");
+        }
+      });
+    </script>
+  </body>
+</html>
