@@ -1,0 +1,47 @@
+body{
+    background-image: url("background.jpg");
+    background-repeat: none;
+    background-size: 100% 100%;
+    position: relative;
+    height: 100vh;
+    display: block;
+    align-content: center;
+    justify-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.oculto{
+    display: none;
+}
+.visivel{
+    display: flex;    
+}
+
+.container{
+    gap: 1rem;
+    width: fit-content;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    margin-top: 1.3rem;
+    background: rgba(255, 255, 255, 0.452);
+    border: 1px solid rgba(0, 0, 0, 0.658);
+    padding: 1rem;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.flex{
+    gap: 5px;
+}
+
+.container, .flex{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.tabela{
+    background: rgba(255, 255, 255, 0.452);
+
+}
