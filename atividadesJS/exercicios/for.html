@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("../imagens/background.jpg");
+        background-repeat: none;
+        background-size: 100% 100%;
+        position: relative;
+        height: 100vh;
+        display: block;
+        align-content: center;
+        justify-items: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+      a {
+        display: block;
+        position: relative;
+        width: 200px;
+        text-align: center;
+        border-radius: 10px 10px 0px 0px;
+        text-decoration: none;
+        color: white;
+        background: radial-gradient(circle at 80% -10%, #fff, #181818);
+        padding: 10px;
+        margin-bottom: 1rem;
+        border: none;
+        cursor: pointer;
+      }
+      a:hover {
+        box-shadow: 1px 5px 5px rgb(53, 53, 53);
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .btnExibir {
+        text-decoration: none;
+        color: white;
+        background: radial-gradient(circle at 80% -10%, #fff, #181818);
+        padding: 10px;
+        margin-bottom: 1rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      p {
+        color: rgb(247, 3, 3);
+        font-weight: bold;
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../index.html">Home</a>
+    <h1>Selecionar Ingredientes</h1>
+    <section>
+      <label
+        ><input
+          class="inputs"
+          type="checkbox"
+          name="arroz"
+          value="Arroz"
+        />Arroz</label
+      >
+      <label
+        ><input
+          class="inputs"
+          type="checkbox"
+          name="feijao"
+          value="Feijão"
+        />Feijão</label
+      >
+      <label
+        ><input
+          class="inputs"
+          type="checkbox"
+          name="batata"
+          value="Batata"
+        />Batata</label
+      >
+      <label
+        ><input
+          class="inputs"
+          type="checkbox"
+          name="macarrao"
+          value="Macarrão"
+        />Macarrão</label
+      >
+      <label
+        ><input
+          class="inputs"
+          type="checkbox"
+          name="carne"
+          value="Carne"
+        />Carne</label
+      >
+    </section>
+    <div>
+      <button class="btnExibir">Exibit Ingredientes Selecionados</button>
+    </div>
+    <p class="mostrarIngredientes"></p>
+    <script>
+      let inputs = document.querySelectorAll(".inputs");
+      let btnExibir = document.querySelector(".btnExibir");
+      let campoTexto = document.querySelector("p");
+      let ingredientes = [];
+
+      btnExibir.addEventListener("click", () => {
+        inputs.forEach(verificarInputs);
+        if (ingredientes.length > 0) {
+          campoTexto.textContent = `Ingredientes selecionados: ${ingredientes.join(
+            ", "
+          )}`;
+        } else {
+          campoTexto.textContent = "Nenhum ingrediente selecionado.";
+        }
+      });
+
+      function verificarInputs(input) {
+        if (input.checked) {
+          ingredientes.push(input.value);
+        }
+      }
+    </script>
+  </body>
+</html>
