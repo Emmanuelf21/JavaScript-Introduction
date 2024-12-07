@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("background.jpg");
+            background-repeat: none;
+            background-size: 100% 100%;
+            /* position: relative; */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+        }
+
+        button {
+            text-decoration: none;
+            color: white;
+            background: radial-gradient(circle at 80% -10%, #fff, #181818);
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: none;
+            cursor: pointer;
+            width: fit-content;
+            padding: 10px 30px 10px 30px;
+            border-radius: 10px;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            gap: 1rem;
+            margin-bottom: 0.7rem;
+            margin-top: 1.3rem;
+            background: rgba(255, 255, 255, 0.452);
+            border: 1px solid rgba(0, 0, 0, 0.658);
+            padding: 1rem;
+            border-radius: 10px;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            height: fit-content;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            height: 1.7rem;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.418);
+            border: none;
+            border-bottom: 2px solid grey;
+            outline: none;
+        }
+
+        .tabela {
+            width: fit-content;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: block;
+            background: rgba(255, 255, 255, 0.452);
+
+        }
+
+        .tabela tr {
+            width: fit-content;
+
+        }
+
+        .tabela tr td,
+        .tabela tr th {
+            width: fit-content;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="" class="formulario">
+        <div class="flex">
+            <label for="nome">Nome do Médico:</label>
+            <input type="text" name="nome" id="nomeMedico" required>
+        </div>
+        <div class="flex">
+            <label for="especialidade">Especialidade:</label>
+            <input type="text" name="especialidade" id="especialidade" required>
+        </div>
+        <div class="flex">
+            <label for="crm">CRM:</label>
+            <input type="text" name="crm" id="crm" required>
+        </div>
+        <button class="btnInserir">Inserir</button>
+    </form>
+    <table class="tabela">
+        <tr>
+            <th>Nome</th>
+            <th>Especialidade</th>
+            <th>CRM</th>
+        </tr>
+
+    </table>
+
+    <script>
+        let dados = [];
+        let tabela = document.querySelector(".tabela");
+        const form = document.querySelector('.formulario');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            armazenarDados();
+        })
+
+
+        function armazenarDados() {
+
+            let nome = document.querySelector("#nomeMedico").value;
+            let especialidade = document.querySelector("#especialidade").value;
+            let crm = document.querySelector("#crm").value;
+
+            dados.push({
+                'nome': nome,
+                'especialidade': especialidade,
+                'crm': crm
+            });
+
+            add();
+        }
+
+        function add() {
+            let dadosTr = tr();
+            tabela.appendChild(dadosTr);
+            document.querySelector("#nomeMedico").value = '';
+            document.querySelector("#especialidade").value = '';
+            document.querySelector("#crm").value = '';
+        }
+
+        function tr() {
+            let tr = document.createElement("tr");
+            dados.forEach((medico) => {
+                Object.values(medico).forEach((valor) => {
+                    let td = document.createElement("td");
+                    td.innerText = valor;
+                    tr.appendChild(td);
+                })
+            })
+            return tr;
+        }
+    </script>
+</body>
+
+</html>
